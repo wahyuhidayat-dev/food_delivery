@@ -60,7 +60,7 @@ class _OnboardingtwoState extends State<Onboardingtwo> {
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const SignUpScreen()));
+                          builder: (context) => const SignInScreen()));
                 },
                 style: ElevatedButton.styleFrom(
                     primary: primaryButton,
