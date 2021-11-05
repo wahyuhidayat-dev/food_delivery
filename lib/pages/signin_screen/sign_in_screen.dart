@@ -168,6 +168,8 @@ class _SignInScreenState extends State<SignInScreen> {
                               builder: (context) => const SignUpScreen()));
                     },
                     style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15)),
                         primary: primaryButton,
                         padding: const EdgeInsets.symmetric(
                             horizontal: 50, vertical: 20)),

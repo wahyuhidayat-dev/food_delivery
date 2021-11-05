@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:lk21/constants/const.dart';
-import 'package:lk21/pages/upload_photo/upload_photo_screen.dart';
 
-class PaymentMethodScreen extends StatefulWidget {
-  const PaymentMethodScreen({Key? key}) : super(key: key);
+class DisplayPhoto extends StatefulWidget {
+  const DisplayPhoto({Key? key}) : super(key: key);
 
   @override
-  _PaymentMethodScreenState createState() => _PaymentMethodScreenState();
+  _DisplayPhotoState createState() => _DisplayPhotoState();
 }
 
-class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
+class _DisplayPhotoState extends State<DisplayPhoto> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +31,6 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                         fit: BoxFit.cover,
                       ),
                     ),
-                    //! Back Screen
                     Padding(
                       padding: const EdgeInsets.only(top: 30, left: 40),
                       child: InkWell(
@@ -47,7 +45,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Text("Payment Method",
+                          Text("Upload Your Photo\nProfile",
                               style: fontDefault.copyWith(
                                   fontSize: 25,
                                   color: whiteColor,
@@ -66,43 +64,39 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                     ),
                   ],
                 ),
-                //! Visa
                 InkWell(
                   onTap: () {},
                   child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           color: backgroundInputText),
-                      width: 335,
-                      height: 73,
+                      width: 245,
+                      height: 240,
                       child: Center(
-                        child: Image.asset(
-                          visa,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              icgallery,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Text("From Gallery",
+                                style: fontDefault.copyWith(
+                                    color: whiteColor,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold))
+                          ],
                         ),
                       )),
                 ),
                 const SizedBox(
                   height: 12,
                 ),
-                //! Paypal
-                InkWell(
-                  onTap: () {},
-                  child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: backgroundInputText),
-                      width: 335,
-                      height: 73,
-                      child: Center(
-                        child: Image.asset(
-                          paypal,
-                        ),
-                      )),
-                ),
                 const SizedBox(
                   height: 20,
                 ),
-                //! Next Button
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: ElevatedButton(
@@ -113,11 +107,11 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 50, vertical: 20)),
                       onPressed: () {
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    const UploadPhotoScreen()));
+                        // Navigator.pushReplacement(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: (context) =>
+                        //             const PaymentMethodScreen()));
                       },
                       child: Text(
                         "Next",

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lk21/constants/const.dart';
+import 'package:lk21/pages/upload_photo/display_photo.dart';
 
 class UploadPhotoScreen extends StatefulWidget {
   const UploadPhotoScreen({Key? key}) : super(key: key);
@@ -133,11 +134,10 @@ class _UploadPhotoScreenState extends State<UploadPhotoScreen> {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 50, vertical: 20)),
                       onPressed: () {
-                        // Navigator.pushReplacement(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //         builder: (context) =>
-                        //             const PaymentMethodScreen()));
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const DisplayPhoto()));
                       },
                       child: Text(
                         "Next",
