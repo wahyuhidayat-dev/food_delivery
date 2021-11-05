@@ -63,6 +63,8 @@ class _OnboardingneState extends State<Onboardingne> {
                           builder: (context) => const Onboardingtwo()));
                 },
                 style: ElevatedButton.styleFrom(
+                   shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15)),
                     primary: primaryButton,
                     padding: const EdgeInsets.symmetric(
                         horizontal: 50, vertical: 20)),

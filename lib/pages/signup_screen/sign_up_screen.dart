@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lk21/constants/const.dart';
+import 'package:lk21/pages/sign_up_process/sign_up_process.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -9,9 +10,22 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
-  bool isCheck = false;
+  bool isKeepMeSignIn = false;
+  bool isSubscribePromo = false;
   @override
   Widget build(BuildContext context) {
+    Color getColor(Set<MaterialState> states) {
+      const Set<MaterialState> interactiveStates = <MaterialState>{
+        MaterialState.pressed,
+        MaterialState.hovered,
+        MaterialState.focused,
+      };
+      if (states.any(interactiveStates.contains)) {
+        return whiteColor;
+      }
+      return primaryButton;
+    }
+
     return Scaffold(
       backgroundColor: blackColor,
       body: SafeArea(
@@ -51,7 +65,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             filled: true,
                             fillColor: backgroundInputText,
                             contentPadding:
-                                const EdgeInsets.symmetric(horizontal: 10),
+                                const EdgeInsets.symmetric(horizontal: 20),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(15)),
                             hintText: "Username",
@@ -75,7 +89,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             filled: true,
                             fillColor: backgroundInputText,
                             contentPadding:
-                                const EdgeInsets.symmetric(horizontal: 10),
+                                const EdgeInsets.symmetric(horizontal: 20),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(15)),
                             hintText: "Email",
@@ -105,7 +119,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             filled: true,
                             fillColor: backgroundInputText,
                             contentPadding:
-                                const EdgeInsets.symmetric(horizontal: 10),
+                                const EdgeInsets.symmetric(horizontal: 20),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(15)),
                             hintText: "Password",
@@ -119,26 +133,61 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   const Divider(
                     height: 20,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Checkbox(
-                        checkColor: primaryButton,
-                        value: isCheck,
-                        onChanged: (bool? value) {
-                          setState(() {
-                            isCheck = value!;
-                          });
-                        },
-                      ),
-                      Text(
-                        "Keep Me Signed In",
-                        style: fontDefault.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: hintText,
-                            fontSize: 12),
-                      ),
-                    ],
+                  Padding(
+                    padding: const EdgeInsets.only(left: 40),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Checkbox(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)),
+                          checkColor: whiteColor,
+                          value: isKeepMeSignIn,
+                          fillColor: MaterialStateProperty.resolveWith(
+                              (states) => getColor(states)),
+                          onChanged: (bool? value) {
+                            setState(() {
+                              isKeepMeSignIn = value!;
+                            });
+                          },
+                        ),
+                        Text(
+                          "Keep Me Signed In",
+                          style: fontDefault.copyWith(
+                              fontWeight: FontWeight.bold,
+                              color: hintText,
+                              fontSize: 12),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 40),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Checkbox(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)),
+                          checkColor: whiteColor,
+                          value: isSubscribePromo,
+                          fillColor: MaterialStateProperty.resolveWith(
+                              (states) => getColor(states)),
+                          onChanged: (bool? value) {
+                            setState(() {
+                              isSubscribePromo = value!;
+                            });
+                          },
+                        ),
+                        Text(
+                          "Email Me About Special Pricing",
+                          style: fontDefault.copyWith(
+                              fontWeight: FontWeight.bold,
+                              color: hintText,
+                              fontSize: 12),
+                        ),
+                      ],
+                    ),
                   ),
                   const Divider(
                     height: 35,
@@ -148,9 +197,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const SignUpScreen()));
+                                builder: (context) => const SignUpProcess()));
                       },
                       style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15)),
                           primary: primaryButton,
                           padding: const EdgeInsets.symmetric(
                               horizontal: 50, vertical: 20)),

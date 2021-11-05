@@ -7,6 +7,12 @@ const illustration2 = "assets/images/Illustration2.png";
 const success = "assets/images/Illustration3.png";
 const facebooklogo = "assets/images/facebook.png";
 const googlelogo = "assets/images/googleicon.png";
+const icback = "assets/images/icon_back.png";
+
+const visa = "assets/images/visa.png";
+const paypal = "assets/images/paypal.png";
+const icgallery = "assets/images/Gallery.png";
+const iccamera = "assets/images/camera.png";
 
 const primaryButton = Color(0xFF53E88B);
 const whiteColor = Color(0xFFFFFFFF);

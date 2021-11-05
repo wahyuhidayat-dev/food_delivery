@@ -1,6 +1,6 @@
-# lk21
+# Food Delivery UI
 
-A new Flutter project.
+Flutter project.
 
 ## Getting Started
 
