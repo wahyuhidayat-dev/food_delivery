@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lk21/constants/const.dart';
+import 'package:lk21/utils/const.dart';
 import 'package:lk21/pages/payment_method_screen/payment_methd_screen.dart';
 
 class SignUpProcess extends StatefulWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lk21/constants/const.dart';
+import 'package:lk21/utils/const.dart';
 import 'package:lk21/pages/onboarding_two/onboarding_two_screen.dart';
 
 class Onboardingne extends StatefulWidget {

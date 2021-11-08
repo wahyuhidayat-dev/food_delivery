@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lk21/constants/const.dart';
+import 'package:lk21/utils/const.dart';
 import 'package:lk21/pages/signin_screen/sign_in_screen.dart';
 
 class Onboardingtwo extends StatefulWidget {

@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         // Remove the debug banner
         debugShowCheckedModeBanner: false,
+        color: Colors.black,
         theme: ThemeData(primaryColorDark: Colors.black),
         home: const SplashScreen());
   }

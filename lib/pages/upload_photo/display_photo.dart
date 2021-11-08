@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lk21/constants/const.dart';
+import 'package:get/get.dart';
+import 'package:lk21/pages/set_location/set_location_screen.dart';
+import 'package:lk21/utils/const.dart';
 
 class DisplayPhoto extends StatefulWidget {
   const DisplayPhoto({Key? key}) : super(key: key);
@@ -34,7 +36,9 @@ class _DisplayPhotoState extends State<DisplayPhoto> {
                     Padding(
                       padding: const EdgeInsets.only(top: 30, left: 40),
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Get.back();
+                        },
                         child: SizedBox(
                             width: 45, height: 45, child: Image.asset(icback)),
                       ),
@@ -95,11 +99,11 @@ class _DisplayPhotoState extends State<DisplayPhoto> {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 50, vertical: 20)),
                       onPressed: () {
-                        // Navigator.pushReplacement(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //         builder: (context) =>
-                        //             const PaymentMethodScreen()));
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const SetLocationScreen()));
                       },
                       child: Text(
                         "Next",

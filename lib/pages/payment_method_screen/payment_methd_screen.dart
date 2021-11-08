@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lk21/constants/const.dart';
+import 'package:lk21/utils/const.dart';
 import 'package:lk21/pages/upload_photo/upload_photo_screen.dart';
 
 class PaymentMethodScreen extends StatefulWidget {

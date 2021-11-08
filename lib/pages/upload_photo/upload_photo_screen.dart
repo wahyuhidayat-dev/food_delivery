@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lk21/constants/const.dart';
+import 'package:get/get.dart';
 import 'package:lk21/pages/upload_photo/display_photo.dart';
+import 'package:lk21/utils/const.dart';
 
 class UploadPhotoScreen extends StatefulWidget {
   const UploadPhotoScreen({Key? key}) : super(key: key);
@@ -35,7 +36,9 @@ class _UploadPhotoScreenState extends State<UploadPhotoScreen> {
                     Padding(
                       padding: const EdgeInsets.only(top: 30, left: 40),
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Get.back();
+                        },
                         child: SizedBox(
                             width: 45, height: 45, child: Image.asset(icback)),
                       ),

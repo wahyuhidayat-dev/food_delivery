@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lk21/constants/const.dart';
+import 'package:lk21/utils/const.dart';
 import 'package:lk21/pages/sign_up_process/sign_up_process.dart';
 
 class SignUpScreen extends StatefulWidget {

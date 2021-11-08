@@ -1,12 +1,8 @@
-# Food Delivery UI
+# Food Delivery UI Kit
 
-Flutter project.
+Flutter UI Kit Food Delivery design from [PixelTrue](https://www.pixeltrue.com/free-ui-kits/food-delivery-ui-kit).
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
+## Screen Shots
 
 <img src="https://raw.githubusercontent.com/wahyuhidayat-dev/food_delivery/master/screenshots/splash.png?sanitize=true&raw=true" />
 <img src="https://raw.githubusercontent.com/wahyuhidayat-dev/food_delivery/master/screenshots/splash1.png?sanitize=true&raw=true" />

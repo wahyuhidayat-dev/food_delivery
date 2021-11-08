@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lk21/constants/const.dart';
+import 'package:lk21/utils/const.dart';
 import 'package:lk21/pages/onboarding_one/onboarding_one_screen.dart';
 
 class SplashScreen extends StatefulWidget {
