@@ -8,6 +8,7 @@ const success = "assets/images/Illustration3.png";
 const facebooklogo = "assets/images/facebook.png";
 const googlelogo = "assets/images/googleicon.png";
 const icback = "assets/images/icon_back.png";
+const userphoto = "assets/images/userphoto.png";
 
 const visa = "assets/images/visa.png";
 const paypal = "assets/images/paypal.png";

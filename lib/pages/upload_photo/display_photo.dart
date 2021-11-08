@@ -73,21 +73,9 @@ class _DisplayPhotoState extends State<DisplayPhoto> {
                       width: 245,
                       height: 240,
                       child: Center(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset(
-                              icgallery,
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            Text("From Gallery",
-                                style: fontDefault.copyWith(
-                                    color: whiteColor,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.bold))
-                          ],
+                        child: Image.asset(
+                          userphoto,
+                          fit: BoxFit.cover,
                         ),
                       )),
                 ),
