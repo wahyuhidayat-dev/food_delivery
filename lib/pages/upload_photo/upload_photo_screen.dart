@@ -124,9 +124,7 @@ class _UploadPhotoScreenState extends State<UploadPhotoScreen> {
                         ),
                       )),
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
+                const Spacer(),
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: ElevatedButton(

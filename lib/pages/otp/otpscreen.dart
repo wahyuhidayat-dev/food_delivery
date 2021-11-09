@@ -107,8 +107,8 @@ class _OtpScreenState extends State<OtpScreen> {
                     child: PinCodeTextField(
                       appContext: context,
                       pastedTextStyle: const TextStyle(
-                        color: Colors.green,
                         fontWeight: FontWeight.bold,
+                        color: whiteColor,
                       ),
                       length: 4,
                       obscureText: true,
@@ -117,7 +117,7 @@ class _OtpScreenState extends State<OtpScreen> {
                       animationType: AnimationType.fade,
                       validator: (v) {
                         if (v!.length < 4) {
-                          return "I'm from validator";
+                          return "Input Verification Code";
                         } else {
                           return null;
                         }
@@ -126,14 +126,16 @@ class _OtpScreenState extends State<OtpScreen> {
                           shape: PinCodeFieldShape.box,
                           borderRadius: BorderRadius.circular(5),
                           fieldHeight: 50,
-                          fieldWidth: 40,
-                          activeFillColor: Colors.white),
-                      cursorColor: Colors.black,
+                          fieldWidth: 50,
+                          activeColor: primaryButton,
+                          activeFillColor: whiteColor),
+                      cursorColor: whiteColor,
                       animationDuration: const Duration(milliseconds: 300),
                       enableActiveFill: true,
                       errorAnimationController: errorController,
                       controller: textEditingController,
                       keyboardType: TextInputType.number,
+
                       // ignore: prefer_const_literals_to_create_immutables
                       boxShadows: [
                         const BoxShadow(
@@ -158,6 +160,24 @@ class _OtpScreenState extends State<OtpScreen> {
                         return true;
                       },
                     )),
+              ),
+              const Spacer(),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: ElevatedButton(
+                    onPressed: () {
+                      //Get.to();
+                    },
+                    style: ElevatedButton.styleFrom(
+                      primary: primaryButton,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 50, vertical: 20),
+                    ),
+                    child: Text("Next",
+                        style: fontDefault.copyWith(
+                            fontWeight: FontWeight.bold, color: whiteColor))),
               )
             ],
           ),

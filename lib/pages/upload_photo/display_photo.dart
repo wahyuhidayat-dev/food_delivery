@@ -83,12 +83,7 @@ class _DisplayPhotoState extends State<DisplayPhoto> {
                         ),
                       )),
                 ),
-                const SizedBox(
-                  height: 12,
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
+                const Spacer(),
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: ElevatedButton(

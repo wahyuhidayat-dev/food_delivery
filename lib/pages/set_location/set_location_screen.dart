@@ -118,9 +118,7 @@ class _SetLocationScreenState extends State<SetLocationScreen> {
                   ],
                 ),
               ),
-              const SizedBox(
-                height: 50,
-              ),
+              const Spacer(),
               Align(
                 alignment: Alignment.bottomCenter,
                 child: ElevatedButton(

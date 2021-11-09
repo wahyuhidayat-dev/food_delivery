@@ -52,26 +52,27 @@ class _OnboardingneState extends State<Onboardingne> {
                   fontSize: 12,
                   fontWeight: FontWeight.normal),
             ),
-            const SizedBox(
-              height: 40,
-            ),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Onboardingtwo()));
-                },
-                style: ElevatedButton.styleFrom(
-                   shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15)),
-                    primary: primaryButton,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 50, vertical: 20)),
-                child: Text(
-                  "Next",
-                  style: fontDefault.copyWith(color: whiteColor),
-                ))
+            const Spacer(),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Onboardingtwo()));
+                  },
+                  style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      primary: primaryButton,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 50, vertical: 20)),
+                  child: Text(
+                    "Next",
+                    style: fontDefault.copyWith(color: whiteColor),
+                  )),
+            )
           ]),
         ),
       ),

@@ -20,14 +20,13 @@ class _SignUpSuccessState extends State<SignUpSuccess> {
           width: double.infinity,
           height: MediaQuery.of(context).size.height,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               const SizedBox(
-                height: 20,
+                height: 40,
               ),
               Image.asset(success, fit: BoxFit.cover),
               const SizedBox(
-                height: 20,
+                height: 50,
               ),
               Text(
                 "Congrats!",
@@ -36,6 +35,9 @@ class _SignUpSuccessState extends State<SignUpSuccess> {
                     fontWeight: FontWeight.bold,
                     fontSize: 26),
               ),
+              const SizedBox(
+                height: 20,
+              ),
               Text(
                 "Your profile is ready to use",
                 style: fontDefault.copyWith(
@@ -43,6 +45,7 @@ class _SignUpSuccessState extends State<SignUpSuccess> {
                     fontWeight: FontWeight.bold,
                     fontSize: 22),
               ),
+              const Spacer(),
               Align(
                 alignment: Alignment.bottomCenter,
                 child: ElevatedButton(
