@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:lk21/utils/const.dart';
 import 'package:lk21/pages/upload_photo/upload_photo_screen.dart';
 
@@ -36,7 +37,9 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                     Padding(
                       padding: const EdgeInsets.only(top: 30, left: 40),
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Get.back();
+                        },
                         child: SizedBox(
                             width: 45, height: 45, child: Image.asset(icback)),
                       ),

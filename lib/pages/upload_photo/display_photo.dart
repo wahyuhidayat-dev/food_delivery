@@ -74,8 +74,8 @@ class _DisplayPhotoState extends State<DisplayPhoto> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           color: backgroundInputText),
-                      width: 245,
-                      height: 240,
+                      width: 200,
+                      height: 200,
                       child: Center(
                         child: Image.asset(
                           userphoto,

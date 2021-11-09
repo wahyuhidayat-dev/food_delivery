@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:lk21/utils/const.dart';
 import 'package:lk21/pages/payment_method_screen/payment_methd_screen.dart';
 
@@ -33,7 +34,9 @@ class _SignUpProcessState extends State<SignUpProcess> {
                     Padding(
                       padding: const EdgeInsets.only(top: 30, left: 40),
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Get.back();
+                        },
                         child: SizedBox(
                             width: 45, height: 45, child: Image.asset(icback)),
                       ),
@@ -133,7 +136,7 @@ class _SignUpProcessState extends State<SignUpProcess> {
                   alignment: Alignment.bottomCenter,
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                         shape: RoundedRectangleBorder(
+                          shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15)),
                           primary: primaryButton,
                           padding: const EdgeInsets.symmetric(

@@ -1,5 +1,6 @@
 // main.dart
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:lk21/pages/splashscreen/splashscreen.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
         // Remove the debug banner
         debugShowCheckedModeBanner: false,
         color: Colors.black,
