@@ -10,6 +10,9 @@ const googlelogo = "assets/images/googleicon.png";
 const icback = "assets/images/icon_back.png";
 const userphoto = "assets/images/userphoto.png";
 
+const message1 = "assets/images/Messages.png";
+const message2 = "assets/images/Message.png";
+
 const visa = "assets/images/visa.png";
 const paypal = "assets/images/paypal.png";
 const icgallery = "assets/images/Gallery.png";

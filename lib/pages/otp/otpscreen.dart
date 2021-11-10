@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lk21/pages/forgot_password/forgot_password.dart';
 import 'package:lk21/utils/const.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
@@ -127,8 +128,13 @@ class _OtpScreenState extends State<OtpScreen> {
                           borderRadius: BorderRadius.circular(5),
                           fieldHeight: 50,
                           fieldWidth: 50,
+                          errorBorderColor: primaryButton,
+                          selectedColor: primaryButton,
+                          selectedFillColor: primaryButton,
+                          inactiveColor: primaryButton,
+                          inactiveFillColor: backgroundInputText,
                           activeColor: primaryButton,
-                          activeFillColor: whiteColor),
+                          activeFillColor: primaryButton),
                       cursorColor: whiteColor,
                       animationDuration: const Duration(milliseconds: 300),
                       enableActiveFill: true,
@@ -166,7 +172,7 @@ class _OtpScreenState extends State<OtpScreen> {
                 alignment: Alignment.bottomCenter,
                 child: ElevatedButton(
                     onPressed: () {
-                      //Get.to();
+                      Get.to(const ForgotPasswordScreen());
                     },
                     style: ElevatedButton.styleFrom(
                       primary: primaryButton,
@@ -178,7 +184,8 @@ class _OtpScreenState extends State<OtpScreen> {
                     child: Text("Next",
                         style: fontDefault.copyWith(
                             fontWeight: FontWeight.bold, color: whiteColor))),
-              )
+              ),
+             
             ],
           ),
         ),
