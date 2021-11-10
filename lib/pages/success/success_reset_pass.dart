@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lk21/pages/otp/otpscreen.dart';
+import 'package:lk21/pages/home/homescreen.dart';
 import 'package:lk21/utils/const.dart';
 
 class SuccessResetpassword extends StatefulWidget {
@@ -50,7 +50,7 @@ class _SuccessResetpasswordState extends State<SuccessResetpassword> {
                 alignment: Alignment.bottomCenter,
                 child: ElevatedButton(
                     onPressed: () {
-                      Get.to(const OtpScreen());
+                      Get.to(const HomeScreen());
                     },
                     style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
